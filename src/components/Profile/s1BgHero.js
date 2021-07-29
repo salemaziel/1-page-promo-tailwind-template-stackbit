@@ -9,7 +9,7 @@ const S1BGHero = ({data}) => {
           <div
             className="absolute top-0 w-full h-full h-screen bg-center bg-cover"
             style={{
-              backgroundImage: `url(${data.siteDataYaml.background_photo})`
+              "backgroundImage" : `url(${data.siteDataYaml.background_photo})`
             }}
           >
             <span id="blackOverlay" className="absolute w-full h-full bg-black opacity-25"></span>
