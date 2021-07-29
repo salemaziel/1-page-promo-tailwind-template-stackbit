@@ -182,5 +182,6 @@ const S3Body = () => (
     </div>
   </>
 );
+}
 
 export default S3Body;
