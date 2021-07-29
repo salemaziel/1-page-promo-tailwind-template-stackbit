@@ -201,7 +201,7 @@ models:
       - type: string
         name: shop_link
         label: Shop Link
-  photos:
+  photo:
     type: data
     label: Photos
     fields:
