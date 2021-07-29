@@ -141,7 +141,7 @@ models:
         name: snapchat_link
         label: Snapchat
         default: https://snapchat.com
-      - type: string
+      - type: url
         name: twitter_link
         label: Twitter
       - type: string
