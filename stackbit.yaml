@@ -6,8 +6,8 @@ buildCommand: gatsby build
 publishDir: public
 pagesDir: src/pages
 staticDir: static
-uploadDir: images
-media_library: src/images
+uploadDir: static/assets/images
+media_library: static/assets/images
 dataDir: siteData
 cmsName: git
 nodeVersion: 12
