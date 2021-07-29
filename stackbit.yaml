@@ -161,7 +161,7 @@ models:
         name: soundcloud_link
         label: Soundcloud
         default: https://soundcloud.com
-      - type: string
+      - type: url
         name: apple_music_link
         label: Apple Music
         default: https://applemusic.com
