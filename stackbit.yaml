@@ -165,7 +165,7 @@ models:
         name: apple_music_link
         label: Apple Music
         default: https://applemusic.com
-      - type: string
+      - type: url
         name: youtube_music_link
         label: Youtube Music
         default: https://music.youtube.com
