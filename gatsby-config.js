@@ -24,7 +24,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
             options: {
                 name: `siteData`,
-                path: `src/siteData`
+                path: `siteData`
 		  }
 		},
 //		{
