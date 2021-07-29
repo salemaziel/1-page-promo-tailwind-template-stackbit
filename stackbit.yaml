@@ -224,6 +224,7 @@ models:
       - type: url
         name: gallery_url
         label: Photo URL
+        default: https://viadelweb.com
   advanced_page_fields:
     type: object
     label: Advanced page fields
