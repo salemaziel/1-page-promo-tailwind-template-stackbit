@@ -149,7 +149,7 @@ models:
         name: spotify_link
         label: Spotify
         default: https://spotify.com
-      - type: string
+      - type: url
         name: instagram_link
         label: Instagram
       - type: string
