@@ -3,7 +3,6 @@ const siteMetadata = require('./site-metadata.json')
 
 
 module.exports = {
-	pathPrefix: '/',
 	siteMetadata: siteMetadata,
 	plugins: [
 		`gatsby-plugin-postcss`,
@@ -16,6 +15,8 @@ module.exports = {
 				path: `${__dirname}/src/images`
 			}
 		},
+        `gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
 		`gatsby-plugin-netlify-cms`,
         `gatsby-transformer-remark`,
 		`gatsby-transformer-yaml`,
@@ -23,7 +24,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
             options: {
                 name: `siteData`,
-                path: `${__dirname}/siteData`
+                path: `siteData`
 		  }
 		},
 //		{
@@ -47,8 +48,6 @@ module.exports = {
 			  },
 			},
 		  },
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
