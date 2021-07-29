@@ -221,7 +221,7 @@ models:
       - type: image
         name: gallery_pic
         label: Gallery Pic
-      - type: string
+      - type: url
         name: gallery_url
         label: Photo URL
   advanced_page_fields:
