@@ -145,7 +145,7 @@ models:
         name: twitter_link
         label: Twitter
         default: https://twitter.com/funkwithelmonk
-      - type: string
+      - type: url
         name: spotify_link
         label: Spotify
       - type: string
