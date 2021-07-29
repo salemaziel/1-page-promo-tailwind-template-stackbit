@@ -11,7 +11,8 @@ import SocialMobile from './socialMobile';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
 
-const S2SocialBio = ({data}) => (
+const S2SocialBio = ({data}) => {
+    return(
   <>
     <div className="flex flex-wrap justify-center mb-32 md:mb-10">
       <ProfileImg data={data}/>
