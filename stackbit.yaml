@@ -176,6 +176,7 @@ models:
       - type: string
         name: tidal_link
         label: Tidal
+        default: https://tidal.com
       - type: string
         name: booking_email
         label: Booking Contact Email
