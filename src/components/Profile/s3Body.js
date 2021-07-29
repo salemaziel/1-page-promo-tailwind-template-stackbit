@@ -6,7 +6,8 @@ import { FaSpotify, FaSoundcloud } from 'react-icons/fa';
 
 import Fade from "react-reveal"
 
-const S3Body = () => (
+const S3Body = () => {
+    return(
   <>
     <div className="py-2 mt-2 text-center border-t border-gray-300 sm:mt-10 sm:py-10">
       <div className="justify-center w-full px-4">
