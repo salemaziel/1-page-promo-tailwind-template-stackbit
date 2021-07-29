@@ -197,7 +197,6 @@ models:
       - type: image
         name: background_photo
         label: Background Image
-        description: The image shown in the background of the section.
       - type: image
         name: caption_photo
         label: Featured Photo
