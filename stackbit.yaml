@@ -180,6 +180,7 @@ models:
       - type: text
         name: booking_email
         label: Booking Contact Email
+        default: salem@viadelweb.com
   bio:
     type: data
     label: Bio
