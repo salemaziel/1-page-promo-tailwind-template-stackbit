@@ -213,6 +213,8 @@ models:
       - type: string
         name: gallery_url
         label: Photo URL
+      - name: ''
+        type: string
   advanced_page_fields:
     type: object
     label: Advanced page fields
