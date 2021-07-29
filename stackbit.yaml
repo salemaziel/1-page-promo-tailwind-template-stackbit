@@ -133,7 +133,7 @@ models:
     label: Social
     file: social.yml
     fields:
-      - type: string
+      - type: url
         name: facebook_link
         label: Facebook
         default: https://www.facebook.com/funkwithelmonk
