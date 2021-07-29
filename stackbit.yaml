@@ -136,7 +136,8 @@ models:
       - type: string
         name: facebook_link
         label: Facebook
-      - type: string
+        default: https://www.facebook.com/funkwithelmonk
+      - type: url
         name: snapchat_link
         label: Snapchat
       - type: string
