@@ -23,7 +23,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
             options: {
                 name: `siteData`,
-                path: `${__dirname}/siteData`
+                path: `${__dirname}/siteData/`
 		  }
 		},
 //		{
