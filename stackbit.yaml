@@ -6,7 +6,9 @@ pagesDir: src/pages
 staticDir: static
 uploadDir: images
 dataDir: siteData
-models: 
+cmsName: git
+nodeVersion: 12
+models:
   config:
     type: data
     label: Config
@@ -102,6 +104,18 @@ models:
     label: Page
     layout: page
     fields:
+      - type: list
+        name: sections
+        label: Sections
+        description: Page sections
+        items:
+          type: model
+          models:
+            - background_section
+            - profile_bio_section
+            - dark_buttons_section
+            - captioned_image_section
+            - gallery_section
       - type: string
         name: title
         label: Title
@@ -109,8 +123,9 @@ models:
         required: true
       - type: model
         name: seo
-        models: [stackbit_page_meta]
-    extends: advanced_page_fields
+        models:
+          - stackbit_page_meta
+        label: Seo
   social:
     type: data
     label: Social
@@ -219,7 +234,9 @@ models:
             - gallery_section
       - type: model
         name: seo
-        models: [stackbit_page_meta]
+        models:
+          - stackbit_page_meta
+        label: Seo
   background_section:
     type: object
     label: Background Section
@@ -234,7 +251,9 @@ models:
       - type: number
         name: background_image_opacity
         label: Background image opacity
-        description: An integer between 0 and 100. A lower value makes the image more transparent
+        description: >-
+          An integer between 0 and 100. A lower value makes the image more
+          transparent
   profile_bio_section:
     type: object
     label: Bio
@@ -258,7 +277,8 @@ models:
         description: social links
         items:
           type: model
-          models: [action]
+          models:
+            - action
   dark_buttons_section:
     type: object
     label: Button Links
@@ -275,7 +295,8 @@ models:
         label: Action Buttons
         items:
           type: model
-          models: [action]
+          models:
+            - action
   captioned_image_section:
     type: object
     label: Featured Photo
@@ -305,7 +326,9 @@ models:
         name: gallery_photos
         items:
           type: model
-          models: [gallery_photos]
+          models:
+            - gallery_photos
+        label: Gallery Photos
   gallery_photos:
     type: object
     label: Photos
@@ -379,7 +402,7 @@ models:
         name: no_follow
         label: No follow
         default: false
-        description: Add rel="nofollow" attribute to the link    
+        description: Add rel="nofollow" attribute to the link
   stackbit_page_meta:
     type: object
     label: Page meta data
@@ -422,11 +445,15 @@ models:
             - type: string
               name: name
               default: ''
+              label: Name
             - type: string
               name: value
               default: ''
+              label: Value
             - type: string
               name: keyName
               default: name
+              label: Key Name
             - type: boolean
               name: relativeUrl
+              label: Relative Url
