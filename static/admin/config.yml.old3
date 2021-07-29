@@ -469,7 +469,7 @@ collections:
                 default: footer
   - name: social
     label: Social
-    file: 'siteData/social.yml'
+    file: 'site/social.yml'
     create: false
     fields:
       - {label: 'Facebook', name: 'facebook_link', widget: string}
@@ -486,7 +486,7 @@ collections:
       - {label: 'Booking Contact Email', name: 'booking_email', widget: string}
   - name: bio
     label: Bio
-    file: 'siteData/bio.yml'
+    file: 'site/bio.yml'
     create: false
     fields:
       - {label: 'Profile Image', name: 'profile_image', widget: image}
@@ -496,7 +496,7 @@ collections:
       - {label: 'Shop Link', name: 'shop_link', widget: string}
   - name: photos
     label: Photos
-    file: 'siteData/photos.yml'
+    file: 'site/photos.yml'
     create: false
     fields:
       - {label: 'Background Image', name: 'background_photo', widget: image}

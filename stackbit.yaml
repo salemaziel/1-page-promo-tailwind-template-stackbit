@@ -154,7 +154,7 @@ models:
         label: Booking Contact Email
   bio:
     type: data
-    label: Social
+    label: Bio
     file: bio.yml
     fields:
       - type: image
