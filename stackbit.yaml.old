@@ -1,0 +1,638 @@
+stackbitVersion: ~0.2.0
+ssgName: custom
+buildCommand: gatsby build
+publishDir: public
+pagesDir: src/pages
+staticDir: static
+uploadDir: images
+models: 
+  config:
+    type: data
+    label: Config
+    file: site-metadata.json
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: description
+        label: Description
+      - type: string
+        name: siteUrl
+        label: Site URL
+  header:
+    type: object
+    label: Featured Links
+    labelField: albumlink
+    fields:
+      - type: string
+        name: albumlink
+        label: Album Link
+        description: Enter the URL of the album or song you want to promote
+  footer:
+    type: object
+    label: Footer configuration
+    labelField: content
+    fields:
+      - type: image
+        name: logo
+        label: Logo
+        description: The logo image displayed on the left side
+      - type: string
+        name: logo_alt
+        label: Logo alt text
+        description: The alt text of the logo image
+      - type: boolean
+        name: has_nav_links
+        label: Enable social links in footer menu
+        description: Display social links in footer menu
+        default: true
+      - type: string
+        name: primary_nav_title
+        label: Primary navigation title
+        description: The title of the primary navigation menu
+      - type: list
+        name: primary_nav_links
+        label: Primary navigation menu links
+        description: List of primary navigation links
+        items:
+          type: model
+          models:
+            - action
+      - type: boolean
+        name: has_secondary_nav
+        label: Enable secondary navigation menu
+        description: Display the secondary navigation menu
+        default: true
+      - type: string
+        name: secondary_nav_title
+        label: Secondary navigation title
+        description: The title of the secondary navigation menu
+      - type: list
+        name: secondary_nav_links
+        label: Secondary navigation menu links
+        description: List of secondary navigation links
+        items:
+          type: model
+          models:
+            - action
+      - type: boolean
+        name: has_social
+        label: Enable social links
+        description: Display the social links
+        default: true
+      - type: list
+        name: social_links
+        label: Social links
+        description: List of social links
+        items:
+          type: model
+          models:
+            - action
+      - type: string
+        name: content
+        label: Footer content
+        description: The copyright text
+  page:
+    type: page
+    label: Page
+    layout: page
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page
+        required: true
+      - type: model
+        name: seo
+        models: [stackbit_page_meta]
+    extends: advanced_page_fields
+  profile:
+    type: data
+    label: Profile
+    layout: page
+    file: site/customization.yml
+    extends: advanced_page_fields
+  advanced_page_fields:
+    type: object
+    label: Advanced page fields
+    fields:
+      - type: string
+        label: Title
+        name: title
+        description: The title of the page
+        required: true
+      - type: list
+        name: sections
+        label: Sections
+        description: Page sections
+        items:
+          type: model
+          models:
+            - background_section
+            - profile_bio_section
+            - dark_buttons_section
+            - captioned_image_section
+            - gallery_section
+            - form_section
+      - type: model
+        name: seo
+        models: [stackbit_page_meta]
+  background_section:
+    type: object
+    label: Background Section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: image
+        name: background_image
+        label: Background Image
+        description: The image shown in the background of the section.
+      - type: number
+        name: background_image_opacity
+        label: Background image opacity
+        description: An integer between 0 and 100. A lower value makes the image more transparent
+  profile_bio_section:
+    type: object
+    label: Bio
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: image
+        name: profile_image
+        label: Profile Pic
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: hometown
+        label: Hometown
+        required: false
+      - type:   
+      - type: model
+        name: social
+        label: Social Links
+        models: [action]
+  dark_buttons_section:
+    type: object
+    label: Button Links
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: image
+        name: avatar_image
+        label: Avatar
+        description: Picture to display on button.
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: model
+          models: [action]
+  captioned_image_section:
+    type: object
+    label: Featured Photo
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: image
+        name: caption_photo
+        label: Photo
+        description: Featured photo to display
+      - type: string
+        name: caption_title
+        label: Featured Title Text
+      - type: string
+        name: caption_subtitle
+        label: Featured Subtitle Text
+        required: false
+  gallery_section:
+    type: object
+    label: Gallery
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: list
+        name: gallery_photos
+        items:
+          type: model
+          models: [photos]
+  photos:
+    type: object
+    label: Photos
+    labelField: label
+    fields:
+      - type: image
+        name: gallery_photo
+        label: Photo
+      - type: string
+        name: url
+        label: URL
+        required: false
+        default: '#'
+  action:
+    type: object
+    label: Action
+    labelField: label
+    fields:
+      - type: string
+        name: label
+        label: Label
+        required: true
+      - type: string
+        name: url
+        label: URL
+        required: true
+        default: '#'
+      - type: enum
+        name: style
+        label: Style
+        options:
+          - link
+          - primary
+          - secondary
+        default: link
+        required: true
+      - type: boolean
+        name: has_icon
+        label: Show icon
+        default: false
+      - type: enum
+        name: icon
+        label: Icon
+        options:
+          - arrow-left
+          - arrow-right
+          - facebook
+          - snapchat
+          - instagram
+          - spotify
+          - soundcloud
+          - apple_music
+          - twitter
+          - vimeo
+          - youtube
+          - tiktok
+          - tidal
+      - type: enum
+        name: icon_position
+        label: Icon position
+        options:
+          - left
+          - right
+          - center
+        default: right
+        description: Select "center" to display icon only and hide the label
+      - type: boolean
+        name: new_window
+        label: Open in new tab/window
+        default: false
+      - type: boolean
+        name: no_follow
+        label: No follow
+        default: false
+        description: Add rel="nofollow" attribute to the link    
+  form_section:
+    type: object
+    label: Form section
+    labelField: title
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: string
+        name: subtitle
+        label: Subtitle
+        description: The subtitle of the section displayed below the title
+      - type: enum
+        name: title_align
+        label: 'Title, subtitle alignment'
+        options:
+          - left
+          - right
+          - center
+        default: left
+        description: The horizontal alignment of the section title and subtitle
+      - type: markdown
+        name: content
+        label: Content
+        description: The text content of the section
+      - type: enum
+        name: content_align
+        label: Content alignment
+        options:
+          - left
+          - right
+          - center
+        default: left
+        description: The horizontal alignment of the section text content
+      - type: enum
+        name: form_position
+        label: Form position
+        options:
+          - left
+          - right
+          - top
+          - bottom
+        default: bottom
+        description: The position of the form relative to the text content of the section
+      - type: enum
+        name: form_width
+        label: Form width
+        options:
+          - fourty
+          - fifty
+          - sixty
+        default: fifty
+        description: >-
+          The form container width as a percentage of the section width. Used
+          only when the form position is set to "left" or "right"
+      - type: enum
+        name: form_layout
+        label: Form layout
+        options:
+          - stacked
+          - inline
+        default: stacked
+        description: >-
+          The layout of the form. "Inline" layout can only be used if the form
+          has one input field
+      - type: boolean
+        name: enable_card
+        label: Display form in a box
+        default: false
+        description: >-
+          Display form inside a box, i.e. add border and background to the form
+          container
+      - type: string
+        name: form_id
+        label: Form ID
+        description: A unique identifier of the form. Must not contain whitespace
+        required: true
+      - type: string
+        name: form_action
+        label: Form action
+        description: >-
+          The path of your custom "success" page, if you want to replace the
+          default success message.
+      - type: list
+        name: form_fields
+        label: Form fields
+        items:
+          type: model
+          models:
+            - form_field
+      - type: string
+        name: submit_label
+        label: Submit button label
+        required: true
+      - type: enum
+        name: align_vert
+        label: Section vertical alignment
+        options:
+          - top
+          - middle
+          - bottom
+        default: top
+        description: >-
+          The vertical alignment of the section text content and form. Used only
+          when the form position is set to "left" or "right"
+      - type: enum
+        name: padding_top
+        label: Section top padding
+        options:
+          - none
+          - small
+          - medium
+          - large
+        default: medium
+        description: The padding area (space) on the top of the section
+      - type: enum
+        name: padding_bottom
+        label: Section bottom padding
+        options:
+          - none
+          - small
+          - medium
+          - large
+        default: medium
+        description: The padding area (space) on the bottom of the section
+      - type: boolean
+        name: has_border
+        label: Section border
+        default: false
+        description: Add section bottom border
+      - type: enum
+        name: background_color
+        label: Background color
+        options:
+          - none
+          - primary
+          - secondary
+        default: none
+        description: The background color of the section
+      - type: image
+        name: background_image
+        label: Background image
+        description: The image displayed in the background of the section
+      - type: number
+        name: background_image_opacity
+        label: Background image opacity
+        description: >-
+          An integer between 0 and 100. A lower value makes the image more
+          transparent
+      - type: enum
+        name: background_image_size
+        label: Background image size
+        options:
+          - auto
+          - contain
+          - cover
+        default: cover
+        description: The size of the background image
+      - type: enum
+        name: background_image_position
+        label: Background image position
+        options:
+          - left top
+          - left center
+          - left bottom
+          - center top
+          - center center
+          - center bottom
+          - right top
+          - right center
+          - right bottom
+        default: center center
+        description: >-
+          The starting position of a background image. The first value is the
+          horizontal position, and the second value is the vertical
+      - type: enum
+        name: background_image_repeat
+        label: Background image repeat
+        options:
+          - repeat
+          - no-repeat
+        default: no-repeat
+        description: Repeat the image to cover the whole area
+  form_field:
+    type: object
+    label: Form field
+    labelField: name
+    fields:
+      - type: enum
+        name: input_type
+        label: Type
+        options:
+          - text
+          - email
+          - tel
+          - number
+          - checkbox
+          - select
+          - textarea
+        description: Type of the form field
+        required: true
+      - type: string
+        name: name
+        label: Name
+        description: 'The name of the field, submitted with the form'
+        required: true
+      - type: string
+        name: label
+        label: Label
+        description: 'The caption of the field, shown above the field input'
+      - type: string
+        name: default_value
+        label: Placeholder text or default value
+        description: >-
+          The placeholder for textual field types or default option for select
+          field
+      - type: list
+        name: options
+        description: 'The list of options, used only when the field type is "select"'
+      - type: boolean
+        name: is_required
+        label: Is the field required?
+        default: false
+  action:
+    type: object
+    label: Action
+    labelField: label
+    fields:
+      - type: string
+        name: label
+        label: Label
+        required: true
+      - type: string
+        name: url
+        label: URL
+        required: true
+        default: '#'
+      - type: enum
+        name: style
+        label: Style
+        options:
+          - link
+          - primary
+          - secondary
+        default: link
+        required: true
+      - type: boolean
+        name: has_icon
+        label: Show icon
+        default: false
+      - type: enum
+        name: icon
+        label: Icon
+        options:
+          - arrow-left
+          - arrow-right
+          - facebook
+          - snapchat
+          - instagram
+          - spotify
+          - soundcloud
+          - apple_music
+          - twitter
+          - vimeo
+          - youtube
+          - tiktok
+          - tidal
+      - type: enum
+        name: icon_position
+        label: Icon position
+        options:
+          - left
+          - right
+          - center
+        default: right
+        description: Select "center" to display icon only and hide the label
+      - type: boolean
+        name: new_window
+        label: Open in new tab/window
+        default: false
+      - type: boolean
+        name: no_follow
+        label: No follow
+        default: false
+        description: Add rel="nofollow" attribute to the link
+  stackbit_page_meta:
+    type: object
+    label: Page meta data
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The page title that goes into the <title> tag
+        default: ''
+      - type: string
+        name: description
+        label: Description
+        description: The page description that goes into the <meta name="description"> tag
+        default: ''
+      - type: list
+        name: robots
+        label: Robots
+        description: The items that go into the <meta name="robots"> tag
+        items:
+          type: enum
+          options:
+            - all
+            - index
+            - follow
+            - noindex
+            - nofollow
+            - noimageindex
+            - notranslate
+            - none
+      - type: list
+        name: extra
+        label: Extra
+        description: >-
+          Additional definition for specific meta tags such as open-graph,
+          twitter, etc.
+        items:
+          type: object
+          labelField: name
+          fields:
+            - type: string
+              name: name
+              default: ''
+            - type: string
+              name: value
+              default: ''
+            - type: string
+              name: keyName
+              default: name
+            - type: boolean
+              name: relativeUrl

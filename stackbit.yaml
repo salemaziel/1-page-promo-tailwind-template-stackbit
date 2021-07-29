@@ -1,0 +1,432 @@
+stackbitVersion: ~0.3.0
+ssgName: gatsby
+buildCommand: gatsby build
+publishDir: public
+pagesDir: src/pages
+staticDir: static
+uploadDir: images
+dataDir: siteData
+models: 
+  config:
+    type: data
+    label: Config
+    file: site-metadata.json
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: description
+        label: Description
+      - type: string
+        name: siteUrl
+        label: Site URL
+  header:
+    type: object
+    label: Featured Links
+    labelField: albumlink
+    fields:
+      - type: string
+        name: albumlink
+        label: Album Link
+        description: Enter the URL of the album or song you want to promote
+  footer:
+    type: object
+    label: Footer configuration
+    labelField: content
+    fields:
+      - type: image
+        name: logo
+        label: Logo
+        description: The logo image displayed on the left side
+      - type: string
+        name: logo_alt
+        label: Logo alt text
+        description: The alt text of the logo image
+      - type: boolean
+        name: has_nav_links
+        label: Enable social links in footer menu
+        description: Display social links in footer menu
+        default: true
+      - type: string
+        name: primary_nav_title
+        label: Primary navigation title
+        description: The title of the primary navigation menu
+      - type: list
+        name: primary_nav_links
+        label: Primary navigation menu links
+        description: List of primary navigation links
+        items:
+          type: model
+          models:
+            - action
+      - type: boolean
+        name: has_secondary_nav
+        label: Enable secondary navigation menu
+        description: Display the secondary navigation menu
+        default: true
+      - type: string
+        name: secondary_nav_title
+        label: Secondary navigation title
+        description: The title of the secondary navigation menu
+      - type: list
+        name: secondary_nav_links
+        label: Secondary navigation menu links
+        description: List of secondary navigation links
+        items:
+          type: model
+          models:
+            - action
+      - type: boolean
+        name: has_social
+        label: Enable social links
+        description: Display the social links
+        default: true
+      - type: list
+        name: social_links
+        label: Social links
+        description: List of social links
+        items:
+          type: model
+          models:
+            - action
+      - type: string
+        name: content
+        label: Footer content
+        description: The copyright text
+  page:
+    type: page
+    label: Page
+    layout: page
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page
+        required: true
+      - type: model
+        name: seo
+        models: [stackbit_page_meta]
+    extends: advanced_page_fields
+  social:
+    type: data
+    label: Social
+    file: social.yml
+    fields:
+      - type: string
+        name: facebook_link
+        label: Facebook
+      - type: string
+        name: snapchat_link
+        label: Snapchat
+      - type: string
+        name: twitter_link
+        label: Twitter
+      - type: string
+        name: spotify_link
+        label: Spotify
+      - type: string
+        name: instagram_link
+        label: Instagram
+      - type: string
+        name: youtube_link
+        label: Youtube
+      - type: string
+        name: soundcloud_link
+        label: Soundcloud
+      - type: string
+        name: apple_music_link
+        label: Apple Music
+      - type: string
+        name: youtube_music_link
+        label: Youtube Music
+      - type: string
+        name: tiktok_link
+        label: Tiktok
+      - type: string
+        name: tidal_link
+        label: Tidal
+      - type: string
+        name: booking_email
+        label: Booking Contact Email
+  bio:
+    type: data
+    label: Social
+    file: bio.yml
+    fields:
+      - type: image
+        name: profile_img
+        label: Profile Image
+      - type: string
+        name: user_name
+        label: Your Name
+      - type: string
+        name: home_town
+        label: Home Town
+      - type: markdown
+        name: about_you
+        label: About You
+      - type: string
+        name: shop_link
+        label: Shop Link
+  photos:
+    type: data
+    label: Photos
+    file: photos.yml
+    fields:
+      - type: image
+        name: background_photo
+        label: Background Image
+        description: The image shown in the background of the section.
+      - type: image
+        name: caption_photo
+        label: Featured Photo
+      - type: string
+        name: caption_title
+        label: Caption Title Text
+      - type: string
+        name: caption_subtitle
+        label: Caption Subtitle Text
+      - type: image
+        name: gallery_pic
+        label: Gallery Pic
+      - type: string
+        name: gallery_url
+        label: Photo URL
+  advanced_page_fields:
+    type: object
+    label: Advanced page fields
+    fields:
+      - type: string
+        label: Title
+        name: title
+        description: The title of the page
+        required: true
+      - type: list
+        name: sections
+        label: Sections
+        description: Page sections
+        items:
+          type: model
+          models:
+            - background_section
+            - profile_bio_section
+            - dark_buttons_section
+            - captioned_image_section
+            - gallery_section
+      - type: model
+        name: seo
+        models: [stackbit_page_meta]
+  background_section:
+    type: object
+    label: Background Section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: image
+        name: background_image
+        label: Background Image
+        description: The image shown in the background of the section.
+      - type: number
+        name: background_image_opacity
+        label: Background image opacity
+        description: An integer between 0 and 100. A lower value makes the image more transparent
+  profile_bio_section:
+    type: object
+    label: Bio
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: image
+        name: profile_image
+        label: Profile Pic
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: hometown
+        label: Hometown
+        required: false
+      - type: list
+        name: social
+        label: Social Links
+        description: social links
+        items:
+          type: model
+          models: [action]
+  dark_buttons_section:
+    type: object
+    label: Button Links
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: image
+        name: avatar_image
+        label: Avatar
+        description: Picture to display on button.
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: model
+          models: [action]
+  captioned_image_section:
+    type: object
+    label: Featured Photo
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: image
+        name: caption_photo
+        label: Photo
+        description: Featured photo to display
+      - type: string
+        name: caption_title
+        label: Featured Title Text
+      - type: string
+        name: caption_subtitle
+        label: Featured Subtitle Text
+        required: false
+  gallery_section:
+    type: object
+    label: Gallery
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: list
+        name: gallery_photos
+        items:
+          type: model
+          models: [gallery_photos]
+  gallery_photos:
+    type: object
+    label: Photos
+    fields:
+      - type: image
+        name: gallery_photo
+        label: Photo
+      - type: string
+        name: url
+        label: URL
+        required: false
+        default: '#'
+  action:
+    type: object
+    label: Action
+    labelField: label
+    fields:
+      - type: string
+        name: label
+        label: Label
+        required: true
+      - type: string
+        name: url
+        label: URL
+        required: true
+        default: '#'
+      - type: enum
+        name: style
+        label: Style
+        options:
+          - link
+          - primary
+          - secondary
+        default: link
+        required: true
+      - type: boolean
+        name: has_icon
+        label: Show icon
+        default: false
+      - type: enum
+        name: icon
+        label: Icon
+        options:
+          - arrow-left
+          - arrow-right
+          - facebook
+          - snapchat
+          - instagram
+          - spotify
+          - soundcloud
+          - apple_music
+          - twitter
+          - vimeo
+          - youtube
+          - tiktok
+          - tidal
+      - type: enum
+        name: icon_position
+        label: Icon position
+        options:
+          - left
+          - right
+          - center
+        default: right
+        description: Select "center" to display icon only and hide the label
+      - type: boolean
+        name: new_window
+        label: Open in new tab/window
+        default: false
+      - type: boolean
+        name: no_follow
+        label: No follow
+        default: false
+        description: Add rel="nofollow" attribute to the link    
+  stackbit_page_meta:
+    type: object
+    label: Page meta data
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The page title that goes into the <title> tag
+        default: ''
+      - type: string
+        name: description
+        label: Description
+        description: The page description that goes into the <meta name="description"> tag
+        default: ''
+      - type: list
+        name: robots
+        label: Robots
+        description: The items that go into the <meta name="robots"> tag
+        items:
+          type: enum
+          options:
+            - all
+            - index
+            - follow
+            - noindex
+            - nofollow
+            - noimageindex
+            - notranslate
+            - none
+      - type: list
+        name: extra
+        label: Extra
+        description: >-
+          Additional definition for specific meta tags such as open-graph,
+          twitter, etc.
+        items:
+          type: object
+          labelField: name
+          fields:
+            - type: string
+              name: name
+              default: ''
+            - type: string
+              name: value
+              default: ''
+            - type: string
+              name: keyName
+              default: name
+            - type: boolean
+              name: relativeUrl

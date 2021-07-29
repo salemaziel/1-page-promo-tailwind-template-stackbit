@@ -1,0 +1,77 @@
+
+backend:
+  name: git-gateway
+  branch: master
+media_folder: static/assets/images
+public_folder: /assets
+collections:
+  - name: SocialConfiguration
+    label: Social
+    files:
+      - label: 'Social Media Links'
+        name: 'social'
+        file: 'site/customization.yml'
+        fields:
+          - {label: 'facebook link', name: 'facebook_link', widget: string}
+          - {label: 'snapchat link', name: 'snapchat_link', widget: string}
+          - {label: 'twitter link', name: 'twitter_link', widget: string}
+          - {label: 'spotify link', name: 'spotify_link', widget: string}
+          - {label: 'instagram link', name: 'instagram_link', widget: string}
+          - {label: 'youtube link', name: 'youtube_link', widget: string}
+          - {label: 'soundcloud link', name: 'soundcloud_link', widget: string}
+          - {label: 'apple-music link', name: 'apple_music_link', widget: string}
+          - {label: 'youtube-music link', name: 'youtube_music_link', widget: string}
+          - {label: 'tiktok link', name: 'tiktok_link', widget: string}
+          - {label: 'tidal link', name: 'tidal_link', widget: string}
+          - {label: 'booking contact email', name: 'booking_email', widget: string}
+  - name: BioConfiguration
+    label: Bio
+    files:
+      - label: 'Add Your Name and Bio Info'
+        name: 'bio'
+        file: 'site/customization.yml'
+        fields:
+          - {label: 'Profile Image', name: 'profile_image', widget: image}
+          - {label: 'Your Name', name: 'user_name', widget: string}
+          - {label: 'Hometown', name: 'home_town', widget: string}
+          - {label: 'About You', name: 'about_you', widget: markdown}
+          - {label: 'shop link', name: 'shop_link', widget: string}
+  - name: ImgConfiguration
+    label: Photos
+    files:
+      - label: 'Add Your Photos'
+        name: 'photos'
+        file: 'site/customization.yml'
+        fields:
+          - {label: 'Background Photo', name: 'background_photo', widget: image}
+          - label: 'Captioned Photo Section'
+            name: 'caption_photo_section'
+            widget: 'object'
+            fields:
+              - {label: 'Photo', name: 'caption_photo', widget: image}
+              - {
+                  label: 'Caption Title Text',
+                  name: caption_title,
+                  widget: string,
+                  class: 
+                }
+              - {
+                  label: 'Caption Subtitle Text',
+                  name: caption_subtitle,
+                  widget: string,
+                  required: false
+                }
+          - label: 'Gallery'
+            name: 'user_gallery'
+            collapsed: false
+            widget: 'list'
+            min: 1
+            max: 8
+            fields:
+              - label: 'Gallery Pictures'
+                label_singular: 'Gallery Picture'
+                name: 'gallery_pictures'
+                widget: object
+                fields:
+                  - {label: 'Picture', name: 'gallery_pic', widget: image }
+                  - {label: 'URL Picture Links To', name: 'gallery_url', widget: 'string', required: false}

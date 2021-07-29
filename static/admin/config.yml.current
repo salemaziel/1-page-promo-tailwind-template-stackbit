@@ -1,0 +1,519 @@
+
+backend:
+  name: git-gateway
+  branch: master
+media_folder: static/assets/images
+public_folder: /assets
+collections:
+  - name: config
+    label: Site configuration
+    files:
+      - name: config
+        label: Site configuration
+        file: site-metadata.json
+        fields:
+          - widget: string
+            name: title
+            label: Title
+            required: true
+            hint: Site title
+          - widget: string
+            name: author
+            label: Author
+            required: false
+            hint: the Authors name
+          - widget: string
+            name: siteUrl
+            label: Site URL
+            required: false
+          - widget: object
+            name: header
+            label: Header configuration
+            required: false
+            fields:
+              - widget: string
+                name: albumlink
+                label: Album Link
+                required: false
+                hint: Album Link to Feature
+              - widget: hidden
+                name: type
+                label: Object Type
+                required: true
+                hint: The type of the object
+                default: albumlink
+          - widget: object
+            name: footer
+            label: Footer configuration
+            required: false
+            fields:
+              - widget: image
+                name: logo
+                label: Logo
+                required: false
+                hint: The logo image displayed on the left side
+              - widget: string
+                name: logo_alt
+                label: Logo alt text
+                required: false
+                hint: The alt text of the logo image
+              - widget: boolean
+                name: has_primary_nav
+                label: Enable primary navigation menu
+                required: false
+                default: true
+                hint: Display the primary navigation menu
+              - widget: string
+                name: primary_nav_title
+                label: Primary navigation title
+                required: false
+                hint: The title of the primary navigation menu
+              - widget: list
+                name: primary_nav_links
+                label: Primary navigation menu links
+                required: false
+                hint: List of primary navigation links
+                fields:
+                  - widget: string
+                    name: label
+                    label: Label
+                    required: true
+                  - widget: string
+                    name: url
+                    label: URL
+                    required: true
+                    default: '#'
+                  - widget: select
+                    name: style
+                    label: Style
+                    required: true
+                    default: link
+                    options:
+                      - link
+                      - primary
+                      - secondary
+                  - widget: boolean
+                    name: has_icon
+                    label: Show icon
+                    required: false
+                    default: false
+                  - widget: select
+                    name: icon
+                    label: Icon
+                    required: false
+                    options:
+                      - arrow-left
+                      - arrow-right
+                      - facebook
+                      - github
+                      - instagram
+                      - linkedin
+                      - pinterest
+                      - reddit
+                      - twitter
+                      - vimeo
+                      - youtube
+                  - widget: select
+                    name: icon_position
+                    label: Icon position
+                    required: false
+                    default: right
+                    hint: Select "center" to display icon only and hide the label
+                    options:
+                      - left
+                      - right
+                      - center
+                  - widget: boolean
+                    name: new_window
+                    label: Open in new tab/window
+                    required: false
+                    default: false
+                  - widget: boolean
+                    name: no_follow
+                    label: No follow
+                    required: false
+                    default: false
+                    hint: Add rel="nofollow" attribute to the link
+                  - widget: hidden
+                    name: type
+                    label: Object Type
+                    required: true
+                    hint: The type of the object
+                    default: action
+              - widget: boolean
+                name: has_secondary_nav
+                label: Enable secondary navigation menu
+                required: false
+                default: true
+                hint: Display the secondary navigation menu
+              - widget: string
+                name: secondary_nav_title
+                label: Secondary navigation title
+                required: false
+                hint: The title of the secondary navigation menu
+              - widget: list
+                name: secondary_nav_links
+                label: Secondary navigation menu links
+                required: false
+                hint: List of secondary navigation links
+                fields:
+                  - widget: string
+                    name: label
+                    label: Label
+                    required: true
+                  - widget: string
+                    name: url
+                    label: URL
+                    required: true
+                    default: '#'
+                  - widget: select
+                    name: style
+                    label: Style
+                    required: true
+                    default: link
+                    options:
+                      - link
+                      - primary
+                      - secondary
+                  - widget: boolean
+                    name: has_icon
+                    label: Show icon
+                    required: false
+                    default: false
+                  - widget: select
+                    name: icon
+                    label: Icon
+                    required: false
+                    options:
+                      - arrow-left
+                      - arrow-right
+                      - facebook
+                      - github
+                      - instagram
+                      - linkedin
+                      - pinterest
+                      - reddit
+                      - twitter
+                      - vimeo
+                      - youtube
+                  - widget: select
+                    name: icon_position
+                    label: Icon position
+                    required: false
+                    default: right
+                    hint: Select "center" to display icon only and hide the label
+                    options:
+                      - left
+                      - right
+                      - center
+                  - widget: boolean
+                    name: new_window
+                    label: Open in new tab/window
+                    required: false
+                    default: false
+                  - widget: boolean
+                    name: no_follow
+                    label: No follow
+                    required: false
+                    default: false
+                    hint: Add rel="nofollow" attribute to the link
+                  - widget: hidden
+                    name: type
+                    label: Object Type
+                    required: true
+                    hint: The type of the object
+                    default: action
+              - widget: boolean
+                name: has_tertiary_nav
+                label: Enable tertiary navigation menu
+                required: false
+                default: true
+                hint: Display the tertiary navigation menu
+              - widget: string
+                name: tertiary_nav_title
+                label: Tertiary navigation title
+                required: false
+                hint: The title of the tertiary navigation menu
+              - widget: list
+                name: tertiary_nav_links
+                label: Tertiary navigation menu links
+                required: false
+                hint: List of tertiary navigation links
+                fields:
+                  - widget: string
+                    name: label
+                    label: Label
+                    required: true
+                  - widget: string
+                    name: url
+                    label: URL
+                    required: true
+                    default: '#'
+                  - widget: select
+                    name: style
+                    label: Style
+                    required: true
+                    default: link
+                    options:
+                      - link
+                      - primary
+                      - secondary
+                  - widget: boolean
+                    name: has_icon
+                    label: Show icon
+                    required: false
+                    default: false
+                  - widget: select
+                    name: icon
+                    label: Icon
+                    required: false
+                    options:
+                      - arrow-left
+                      - arrow-right
+                      - facebook
+                      - github
+                      - instagram
+                      - linkedin
+                      - pinterest
+                      - reddit
+                      - twitter
+                      - vimeo
+                      - youtube
+                  - widget: select
+                    name: icon_position
+                    label: Icon position
+                    required: false
+                    default: right
+                    hint: Select "center" to display icon only and hide the label
+                    options:
+                      - left
+                      - right
+                      - center
+                  - widget: boolean
+                    name: new_window
+                    label: Open in new tab/window
+                    required: false
+                    default: false
+                  - widget: boolean
+                    name: no_follow
+                    label: No follow
+                    required: false
+                    default: false
+                    hint: Add rel="nofollow" attribute to the link
+                  - widget: hidden
+                    name: type
+                    label: Object Type
+                    required: true
+                    hint: The type of the object
+                    default: action
+              - widget: boolean
+                name: has_social
+                label: Enable social links
+                required: false
+                default: true
+                hint: Display the social links
+              - widget: list
+                name: social_links
+                label: Social links
+                required: false
+                hint: List of social links
+                fields:
+                  - widget: string
+                    name: label
+                    label: Label
+                    required: true
+                  - widget: string
+                    name: url
+                    label: URL
+                    required: true
+                    default: '#'
+                  - widget: select
+                    name: style
+                    label: Style
+                    required: true
+                    default: link
+                    options:
+                      - link
+                      - primary
+                      - secondary
+                  - widget: boolean
+                    name: has_icon
+                    label: Show icon
+                    required: false
+                    default: false
+                  - widget: select
+                    name: icon
+                    label: Icon
+                    required: false
+                    options:
+                      - arrow-left
+                      - arrow-right
+                      - facebook
+                      - github
+                      - instagram
+                      - linkedin
+                      - pinterest
+                      - reddit
+                      - twitter
+                      - vimeo
+                      - youtube
+                  - widget: select
+                    name: icon_position
+                    label: Icon position
+                    required: false
+                    default: right
+                    hint: Select "center" to display icon only and hide the label
+                    options:
+                      - left
+                      - right
+                      - center
+                  - widget: boolean
+                    name: new_window
+                    label: Open in new tab/window
+                    required: false
+                    default: false
+                  - widget: boolean
+                    name: no_follow
+                    label: No follow
+                    required: false
+                    default: false
+                    hint: Add rel="nofollow" attribute to the link
+                  - widget: hidden
+                    name: type
+                    label: Object Type
+                    required: true
+                    hint: The type of the object
+                    default: action
+              - widget: string
+                name: content
+                label: Footer content
+                required: false
+                hint: The copyright text
+              - widget: list
+                name: links
+                label: Links
+                required: false
+                hint: A list of links displayed next to the copyright text
+                fields:
+                  - widget: string
+                    name: label
+                    label: Label
+                    required: true
+                  - widget: string
+                    name: url
+                    label: URL
+                    required: true
+                    default: '#'
+                  - widget: select
+                    name: style
+                    label: Style
+                    required: true
+                    default: link
+                    options:
+                      - link
+                      - primary
+                      - secondary
+                  - widget: boolean
+                    name: has_icon
+                    label: Show icon
+                    required: false
+                    default: false
+                  - widget: select
+                    name: icon
+                    label: Icon
+                    required: false
+                    options:
+                      - arrow-left
+                      - arrow-right
+                      - facebook
+                      - github
+                      - instagram
+                      - linkedin
+                      - pinterest
+                      - reddit
+                      - twitter
+                      - vimeo
+                      - youtube
+                  - widget: select
+                    name: icon_position
+                    label: Icon position
+                    required: false
+                    default: right
+                    hint: Select "center" to display icon only and hide the label
+                    options:
+                      - left
+                      - right
+                      - center
+                  - widget: boolean
+                    name: new_window
+                    label: Open in new tab/window
+                    required: false
+                    default: false
+                  - widget: boolean
+                    name: no_follow
+                    label: No follow
+                    required: false
+                    default: false
+                    hint: Add rel="nofollow" attribute to the link
+                  - widget: hidden
+                    name: type
+                    label: Object Type
+                    required: true
+                    hint: The type of the object
+                    default: action
+              - widget: hidden
+                name: type
+                label: Object Type
+                required: true
+                hint: The type of the object
+                default: footer
+  - name: social
+    label: Social
+    file: 'site/social.yml'
+    create: false
+    fields:
+      - {label: 'Facebook', name: 'facebook_link', widget: string}
+      - {label: 'Snapchat', name: 'snapchat_link', widget: string}
+      - {label: 'Twitter', name: 'twitter_link', widget: string}
+      - {label: 'Spotify', name: 'spotify_link', widget: string}
+      - {label: 'Instagram', name: 'instagram_link', widget: string}
+      - {label: 'Youtube', name: 'youtube_link', widget: string}
+      - {label: 'Soundcloud', name: 'soundcloud_link', widget: string}
+      - {label: 'Apple Music', name: 'apple_music_link', widget: string}
+      - {label: 'Youtube Music', name: 'youtube_music_link', widget: string}
+      - {label: 'Tiktok', name: 'tiktok_link', widget: string}
+      - {label: 'Tidal', name: 'tidal_link', widget: string}
+      - {label: 'Booking Contact Email', name: 'booking_email', widget: string}
+  - name: bio
+    label: Bio
+    file: 'site/bio.yml'
+    create: false
+    fields:
+      - {label: 'Profile Image', name: 'profile_image', widget: image}
+      - {label: 'Your Name', name: 'user_name', widget: string}
+      - {label: 'Hometown', name: 'home_town', widget: string}
+      - {label: 'About You', name: 'about_you', widget: markdown}
+      - {label: 'Shop Link', name: 'shop_link', widget: string}
+  - name: photos
+    label: Photos
+    file: 'site/photos.yml'
+    create: false
+    fields:
+      - {label: 'Background Image', name: 'background_photo', widget: image}
+      - {label: 'Featured Photo', name: 'caption_photo', widget: image}
+      - {label: 'Caption Title Text', name: caption_title, widget: string}
+      - {label: 'Caption Subtitle Text', name: 'caption_subtitle', widget: string}
+      - label: 'Gallery'
+        name: 'user_gallery'
+        collapsed: false
+        widget: 'list'
+        min: 1
+        max: 8
+        fields:
+          - label: 'Gallery Pictures'
+            label_singular: 'Gallery Picture'
+            name: 'gallery_pictures'
+            widget: object
+            fields:
+              - {label: 'Picture', name: 'gallery_pic', widget: image }
+              - {label: 'Picture URL', name: 'gallery_url', widget: 'string', required: false}

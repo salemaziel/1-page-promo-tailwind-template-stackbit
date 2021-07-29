@@ -1,0 +1,13 @@
+/* ./src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+  .bgPic {
+    height: 50vh;
+  }
+  @media screen and (min-width: 1280px) {
+    .bgPic {
+      height: 65vh;
+    }
+  }
