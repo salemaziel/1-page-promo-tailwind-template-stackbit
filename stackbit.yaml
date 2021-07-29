@@ -172,6 +172,7 @@ models:
       - type: url
         name: tiktok_link
         label: Tiktok
+        default: https://tiktok.com
       - type: string
         name: tidal_link
         label: Tidal
