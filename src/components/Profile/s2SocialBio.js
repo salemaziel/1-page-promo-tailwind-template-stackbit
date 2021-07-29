@@ -20,12 +20,12 @@ const S2SocialBio = ({data}) => (
     </div>
     <div className="mt-12 text-center">
       <h3 className="mb-2 text-4xl font-semibold leading-normal text-gray-800 font-ubuntu">
-        {data.siteYaml.user_name}
+        {data.siteDataYaml.user_name}
       </h3>
       <div className="my-2 text-sm font-bold leading-normal text-gray-500 uppercase font-ubuntu">
         <div className="flex flex-row justify-center text-center">
           <FaMapMarkerAlt size="1rem" className="mr-2" />{' '}
-          <span className="">{data.siteYaml.home_town}</span>
+          <span className="">{data.siteDataYaml.home_town}</span>
         </div>
       </div>
 
@@ -36,7 +36,7 @@ const S2SocialBio = ({data}) => (
           </a>
 </div> */}
         <h2 className="text-lg font-bold text-gray-700 font-ubuntu">
-        {data.siteYaml.about_you}
+        {data.siteDataYaml.about_you}
         </h2>
       </div>
     </div>

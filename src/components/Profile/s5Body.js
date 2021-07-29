@@ -16,56 +16,56 @@ const S5Body = ({data}) => (
 								<div className="w-1/2 px-2 mb-8 md:w-1/4 md:px-4">
 									<img
 										className="rounded shadow"
-										src={data.siteYaml.gallery_pic}
+										src={data.siteDataYaml.gallery_pic}
 										alt=""
 									/>
 								</div>
 								<div className="w-1/2 px-2 mb-8 md:w-1/4 md:px-4">
 									<img
 										className="rounded shadow"
-										src={data.siteYaml.gallery_pic}
+										src={data.siteDataYaml.gallery_pic}
 										alt=""
 									/>
 								</div>
 								<div className="w-1/2 px-2 mb-8 md:w-1/4 md:px-4">
 									<img
 										className="rounded shadow"
-										src={data.siteYaml.gallery_pic}
+										src={data.siteDataYaml.gallery_pic}
 										alt=""
 									/>
 								</div>
 								<div className="w-1/2 px-2 mb-8 md:w-1/4 md:px-4">
 									<img
 										className="rounded shadow"
-										src={data.siteYaml.gallery_pic}
+										src={data.siteDataYaml.gallery_pic}
 										alt=""
 									/>
 								</div>
 								<div className="w-1/2 px-2 mb-8 md:w-1/4 md:px-4">
 									<img
 										className="rounded shadow"
-										src={data.siteYaml.gallery_pic}
+										src={data.siteDataYaml.gallery_pic}
 										alt=""
 									/>
 								</div>
 								<div className="w-1/2 px-2 mb-8 md:w-1/4 md:px-4">
 									<img
 										className="rounded shadow"
-										src={data.siteYaml.gallery_pic}
+										src={data.siteDataYaml.gallery_pic}
 										alt=""
 									/>
 								</div>
 								<div className="w-1/2 px-2 mb-8 md:w-1/4 md:px-4">
 									<img
 										className="rounded shadow"
-										src={data.siteYaml.gallery_pic}
+										src={data.siteDataYaml.gallery_pic}
 										alt=""
 									/>
 								</div>
 								<div className="w-1/2 px-2 mb-8 md:w-1/4 md:px-4">
 									<img
 										className="rounded shadow"
-										src={data.siteYaml.gallery_pic}
+										src={data.siteDataYaml.gallery_pic}
 										alt=""
 									/>
 								</div>

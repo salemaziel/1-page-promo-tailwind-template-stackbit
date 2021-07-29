@@ -158,7 +158,7 @@ models:
     file: bio.yml
     fields:
       - type: image
-        name: profile_img
+        name: profile_image
         label: Profile Image
       - type: string
         name: user_name

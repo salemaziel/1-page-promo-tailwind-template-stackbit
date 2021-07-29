@@ -39,7 +39,7 @@ const ProfilePage = ({data}) => (
   );
   let indexQuery = graphql`
   query {
-    siteYaml {
+    siteDataYaml {
       facebook_link
       apple_music_link
       background_photo

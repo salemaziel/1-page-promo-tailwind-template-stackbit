@@ -14,17 +14,17 @@ const S4Body = ({data}) => (
 			<div className="flex flex-col items-center justify-center w-full px-6 py-10 md:w-1/2 lg:p-16 xl:p-24">
 				<Fade bottom>
 					<h2 className="max-w-lg text-4xl font-light leading-tight text-white md:text-3xl lg:text-4xl xl:text-5xl font-ubuntu">
-						{data.siteYaml.caption_title}
+						{data.siteDataYaml.caption_title}
 					</h2>
 					<p className="max-w-lg mt-5 text-xl text-left text-gray-500 md:text-base lg:text-xl font-ubuntu">
-						{data.siteYaml.caption_subtitle}
+						{data.siteDataYaml.caption_subtitle}
 					</p>
 				</Fade>
 			</div>
 			<div className="w-full md:w-1/2">
 				<Fade right>
 					<img
-						src={data.siteYaml.caption_photo}
+						src={data.siteDataYaml.caption_photo}
 						className="inset-0 object-cover"
 						alt="Captioned Description"
 					/>
