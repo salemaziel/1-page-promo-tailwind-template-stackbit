@@ -152,6 +152,7 @@ models:
       - type: url
         name: instagram_link
         label: Instagram
+        default: https://www.instagram.com/funkwithelmonk/
       - type: string
         name: youtube_link
         label: Youtube
