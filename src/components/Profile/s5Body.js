@@ -17,7 +17,7 @@ const S5Body = ({data}) => (
 									<img
 										className="rounded shadow"
 										src={data.siteDataYaml.gallery_pic}
-										alt=""
+										alt="test"
 									/>
 								</div>
 								<div className="w-1/2 px-2 mb-8 md:w-1/4 md:px-4">
