@@ -204,6 +204,7 @@ models:
   photos:
     type: data
     label: Photos
+    file: photos.yml
     fields:
       - type: image
         name: background_photo
