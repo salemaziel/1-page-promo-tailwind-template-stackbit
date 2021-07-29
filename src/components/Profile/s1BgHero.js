@@ -2,7 +2,8 @@ import React from 'react'
 //import BGPic from '../../images/wallhaven-45y613_m50.jpg';
 
 
-const S1BGHero = ({data}) => (
+const S1BGHero = ({data}) => {
+    return(
     <>
         <section className="relative block bgPic">
           <div
