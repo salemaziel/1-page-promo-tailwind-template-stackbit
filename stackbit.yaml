@@ -169,7 +169,7 @@ models:
         name: youtube_music_link
         label: Youtube Music
         default: https://music.youtube.com
-      - type: string
+      - type: url
         name: tiktok_link
         label: Tiktok
       - type: string
