@@ -157,7 +157,7 @@ models:
         name: youtube_link
         label: Youtube
         default: https://youtube.com
-      - type: string
+      - type: url
         name: soundcloud_link
         label: Soundcloud
       - type: string
