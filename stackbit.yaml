@@ -7,7 +7,7 @@ publishDir: public
 pagesDir: src/pages
 staticDir: static
 uploadDir: images
-media_library: src/images
+media_library: static/images
 dataDir: siteData
 cmsName: git
 nodeVersion: 12
