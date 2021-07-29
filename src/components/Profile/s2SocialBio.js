@@ -16,7 +16,6 @@ const S2SocialBio = ({data}) => {
   <>
     <div className="flex flex-wrap justify-center mb-32 md:mb-10">
       <ProfileImg data={data}/>
-
       <SocialDesktop data={data}/>
     </div>
     <div className="mt-12 text-center">
