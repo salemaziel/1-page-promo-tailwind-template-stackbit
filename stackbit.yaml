@@ -204,7 +204,7 @@ models:
   photos:
     type: data
     label: Photos
-    file: photos.yml
+    file: ''
     fields:
       - type: image
         name: background_photo
@@ -225,6 +225,7 @@ models:
         name: gallery_url
         label: Photo URL
         default: https://viadelweb.com
+    singleInstance: true
   advanced_page_fields:
     type: object
     label: Advanced page fields
