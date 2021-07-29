@@ -6,7 +6,7 @@ pagesDir: src/pages
 staticDir: static
 uploadDir: images
 dataDir: siteData
-cmsName: netlifycms
+cmsName: git
 nodeVersion: 12
 models:
   config:
@@ -169,7 +169,7 @@ models:
         label: Booking Contact Email
   bio:
     type: data
-    label: Social
+    label: Bio
     file: bio.yml
     fields:
       - type: image
