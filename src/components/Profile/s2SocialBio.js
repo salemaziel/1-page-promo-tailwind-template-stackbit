@@ -45,5 +45,5 @@ const S2SocialBio = ({data}) => {
     <SocialMobile data={data} />
   </>
 );
-
+}
 export default S2SocialBio;
