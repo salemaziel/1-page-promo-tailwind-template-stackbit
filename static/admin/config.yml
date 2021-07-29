@@ -503,7 +503,7 @@ collections:
       - {label: 'Featured Photo', name: 'caption_photo', widget: image}
       - {label: 'Caption Title Text', name: caption_title, widget: string}
       - {label: 'Caption Subtitle Text', name: 'caption_subtitle', widget: string}
-      - label: 'Gallery'
+      - {label: 'Gallery'
         name: 'user_gallery'
         collapsed: false
         widget: 'list'
