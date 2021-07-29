@@ -35,7 +35,7 @@ const S1BGHero = ({data}) => {
           </div>*/}
         </section>
     </>
-)
-}
+);
+};
 
 export default S1BGHero
