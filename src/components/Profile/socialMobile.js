@@ -1,6 +1,6 @@
 import React from "react"
 
-import { FaFacebook, FaInstagram, FaTwitter, FaSnapchat, FaYoutube, Fa } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaSnapchat, FaYoutube } from 'react-icons/fa';
 
 
 const SocialMobile = ({data}) => (
