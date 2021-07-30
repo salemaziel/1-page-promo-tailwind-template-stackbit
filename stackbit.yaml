@@ -233,6 +233,8 @@ models:
         type: url
         default: https://snapchat.com
         label: Snapchat
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
