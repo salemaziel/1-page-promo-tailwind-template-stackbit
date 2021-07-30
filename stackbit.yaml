@@ -253,6 +253,7 @@ models:
         label: Apple Music
       - name: youtube_music_link
         type: string
+        label: Youtube Music
   photos:
     type: data
     label: Photos
