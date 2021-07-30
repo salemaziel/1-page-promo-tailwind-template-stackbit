@@ -214,11 +214,11 @@ models:
         name: caption_photo
         label: Featured Photo
       - type: string
-        name: caption_subtitle
-        label: Caption Subtitle Text
-      - type: string
         name: caption_title
         label: Caption Title Text
+      - type: string
+        name: caption_subtitle
+        label: Caption Subtitle Text
       - type: image
         name: gallery_pic
         label: Gallery Pic
