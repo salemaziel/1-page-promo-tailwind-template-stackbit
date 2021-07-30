@@ -226,8 +226,7 @@ models:
         label: Photo URL
         default: https://viadelweb.com
       - name: facebook_link
-        type: object
-        fields: []
+        type: url
   photos:
     type: data
     label: Photos
