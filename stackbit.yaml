@@ -236,7 +236,7 @@ models:
       - name: twitter_link
         type: string
         label: Twitter
-      - name: ''
+      - name: spotify_link
         type: string
   photos:
     type: data
