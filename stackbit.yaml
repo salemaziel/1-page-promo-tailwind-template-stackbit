@@ -239,6 +239,8 @@ models:
       - name: spotify_link
         type: string
         label: Spotify
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
