@@ -36,7 +36,7 @@ const SocialMobile = ({data}) => (
                     </div>
                     : null }
 
- {data.siteDataYaml.instagram_link ?
+            {data.siteDataYaml.instagram_link ?
                     <div className="p-3 text-center lg:mr-4">
                       <span className="block text-xl font-bold tracking-wide text-blue-700 uppercase">
                         <a
