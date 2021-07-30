@@ -225,6 +225,8 @@ models:
         type: url
         label: Photo URL
         default: https://viadelweb.com
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
