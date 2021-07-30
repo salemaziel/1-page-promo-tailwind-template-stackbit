@@ -231,6 +231,7 @@ models:
         default: https://facebook.com
       - name: snapchat_link
         type: string
+        default: https://snapchat.com
   photos:
     type: data
     label: Photos
