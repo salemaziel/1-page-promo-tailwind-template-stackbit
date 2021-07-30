@@ -243,7 +243,7 @@ models:
         type: url
         label: Instagram
       - name: youtube_link
-        type: string
+        type: url
         label: Youtube
       - name: soundcloud_link
         type: url
