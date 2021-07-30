@@ -20,7 +20,7 @@ const SocialMobile = ({data}) => (
                         </a>
                       </span>
                     </div> : null }
-
+                 {data.siteDataYaml.facebook_link ?
                     <div className="p-3 mr-4 text-center">
                       <span className="block text-xl font-bold tracking-wide text-blue-700 uppercase">
                         <a
