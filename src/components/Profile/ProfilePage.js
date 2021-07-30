@@ -13,7 +13,8 @@ import S5Body from './s5Body';
 
 import S2SocialBio from './s2SocialBio';
 
-const ProfilePage = ({data}) => (
+//const ProfilePage = ({data}) => (
+
     <>
       {/*<Navbar transparent />*/}
       <div className="profile-page bgBottom">
