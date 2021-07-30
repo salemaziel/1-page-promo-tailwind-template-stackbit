@@ -244,6 +244,9 @@ models:
         label: Instagram
       - name: youtube_link
         type: string
+        label: Youtube
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
