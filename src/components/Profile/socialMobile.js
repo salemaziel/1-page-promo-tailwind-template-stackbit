@@ -78,7 +78,7 @@ const SocialMobile = ({data}) => (
                           target="_blank"
                           className="text-blue-700"
                         >
-                          <FaSnapchat size="2rem" />
+                          <FaYoutube size="2rem" />
                         </a>
                       </span>
                     </div>
