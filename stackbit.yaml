@@ -202,6 +202,12 @@ models:
       - type: string
         name: shop_link
         label: Shop Link
+      - name: background_photo
+        type: image
+        label: Background Photo
+        default: /assets/images/wallhaven-45y613_m50.jpg
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
