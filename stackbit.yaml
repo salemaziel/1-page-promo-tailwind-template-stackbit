@@ -220,6 +220,7 @@ models:
         default: just doin my spiritual thang
       - name: gallery_pic
         type: image
+        label: Gallery Pic
   photos:
     type: data
     label: Photos
