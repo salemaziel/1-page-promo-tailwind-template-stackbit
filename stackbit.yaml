@@ -245,7 +245,7 @@ models:
       - name: youtube_link
         type: string
         label: Youtube
-      - name: ''
+      - name: soundcloud_link
         type: string
   photos:
     type: data
