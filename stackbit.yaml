@@ -237,7 +237,7 @@ models:
         type: string
         label: Twitter
       - name: spotify_link
-        type: string
+        type: url
         label: Spotify
       - name: instagram_link
         type: url
