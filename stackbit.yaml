@@ -242,7 +242,7 @@ models:
       - name: instagram_link
         type: string
         label: Instagram
-      - name: ''
+      - name: youtube_link
         type: string
   photos:
     type: data
