@@ -1,6 +1,6 @@
 import React from "react"
 
-import { FaFacebook, FaInstagram, FaTwitter, } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaSnapchat } from 'react-icons/fa';
 
 
 const SocialMobile = ({data}) => (
@@ -62,7 +62,7 @@ const SocialMobile = ({data}) => (
                           target="_blank"
                           className="text-blue-700"
                         >
-                          <FaTwitter size="2rem" />
+                          <FaSnapchat size="2rem" />
                         </a>
                       </span>
                     </div>
