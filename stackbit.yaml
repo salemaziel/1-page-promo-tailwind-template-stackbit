@@ -262,6 +262,7 @@ models:
         label: Tidal
       - name: booking_email
         type: string
+        label: Booking Contact Email
   photos:
     type: data
     label: Photos
