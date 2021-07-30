@@ -13,7 +13,8 @@ import S5Body from './s5Body';
 
 import S2SocialBio from './s2SocialBio';
 
-const ProfilePage = ({data}) => (
+const ProfilePage = ({data}) => {
+    return(
     <>
       {/*<Navbar transparent />*/}
       <div className="profile-page bgBottom">
@@ -37,6 +38,7 @@ const ProfilePage = ({data}) => (
       </div>
     </>
   );
+};
   let indexQuery = graphql`
   query {
     siteDataYaml {
