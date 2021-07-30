@@ -213,6 +213,7 @@ models:
       - name: caption_title
         type: string
         label: Featured Photo Title Text
+        default: Funk With El Monk
   photos:
     type: data
     label: Photos
