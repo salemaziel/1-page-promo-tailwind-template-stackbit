@@ -68,11 +68,11 @@ const SocialMobile = ({data}) => (
                     </div>
                     : null }
 
-                                    {data.siteDataYaml.snapchat_link ?
+                                    {data.siteDataYaml.youtube_link ?
                     <div className="p-3 text-center lg:mr-4">
                       <span className="block text-xl font-bold tracking-wide text-blue-700 uppercase">
                         <a
-                          href={data.siteDataYaml.snapchat_link}
+                          href={data.siteDataYaml.youtube_link}
                           title="El Monk on Twitter"
                           rel="noopener noreferrer"
                           target="_blank"
