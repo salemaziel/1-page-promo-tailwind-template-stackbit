@@ -217,6 +217,7 @@ models:
       - name: caption_subtitle
         type: string
         label: Featured Photo Subtitle Text
+        default: just doin my spiritual thang
   photos:
     type: data
     label: Photos
