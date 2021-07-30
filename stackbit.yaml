@@ -241,6 +241,9 @@ models:
         label: Spotify
       - name: instagram_link
         type: string
+        label: Instagram
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
