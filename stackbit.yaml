@@ -208,6 +208,7 @@ models:
         default: /assets/images/wallhaven-45y613_m50.jpg
       - name: caption_photo
         type: string
+        label: Featured Photo
   photos:
     type: data
     label: Photos
