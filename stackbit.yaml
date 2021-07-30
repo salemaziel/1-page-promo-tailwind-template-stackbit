@@ -255,7 +255,7 @@ models:
         type: url
         label: Youtube Music
       - name: tiktok_link
-        type: string
+        type: url
   photos:
     type: data
     label: Photos
