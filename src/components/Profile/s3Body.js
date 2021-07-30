@@ -24,7 +24,7 @@ const S3Body = () => {
               <Fade top cascade>
                 {/* Member 1 */}
 
-                <div className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                <a href="#" className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                   <div className="relative z-10 flex items-center w-full h-full px-6 py-5 bg-black rounded-lg">
                     <div className="flex-shrink-0 mr-4">
                       <img className="w-16 h-16 rounded-full" src={Monk} alt=""/>
@@ -47,9 +47,9 @@ const S3Body = () => {
                     </div>
                   </div>
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-yellow-400 via-purple-400 to-pink-500" />
-                </div>
+                </a>
                 {/* Member 2 */}
-                <div className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                <a href="#" className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                   <div className="relative z-10 flex items-center w-full h-full px-6 py-5 bg-black rounded-lg">
                     <div className="flex-shrink-0 mr-4">
                       <img className="w-16 h-16 rounded-full" src={Monk} alt=""/>
@@ -72,9 +72,9 @@ const S3Body = () => {
                     </div>
                   </div>
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-400 via-pink-500 to-yellow-400" />
-                </div>
+                </a>
                 {/* Member 3 */}
-                <div className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                <a href="#" className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                   <div className="relative z-10 flex items-center w-full h-full px-6 py-5 bg-black rounded-lg">
                     <div className="flex-shrink-0 mr-4">
                       <img className="w-16 h-16 rounded-full" src={Monk} alt=""/>
@@ -97,9 +97,9 @@ const S3Body = () => {
                     </div>
                   </div>
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-pink-500 via-purple-500 to-yellow-400" />
-                </div>
+                </a>
                 {/* Member 4 */}
-                <div className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                <a href="#" className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                   <div className="relative z-10 flex items-center w-full h-full px-6 py-5 bg-black rounded-lg">
                     <div className="flex-shrink-0 mr-4">
                       <img className="w-16 h-16 rounded-full" src={Monk} alt=""/>
@@ -122,9 +122,9 @@ const S3Body = () => {
                     </div>
                   </div>
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-yellow-400 via-purple-400 to-pink-500" />
-                </div>
+                </a>
                 {/* Member 5 */}
-                <div className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                <a href="#" className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                   <div className="relative z-10 flex items-center w-full h-full px-6 py-5 bg-black rounded-lg">
                     <div className="flex-shrink-0 mr-4">
                       <img className="w-16 h-16 rounded-full" src={Monk} alt=""/>
@@ -147,9 +147,9 @@ const S3Body = () => {
                     </div>
                   </div>
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-400 via-pink-500 to-yellow-400" />
-                </div>
+                </a>
                 {/* Member 6 */}
-                <div className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                <a href="#" className="relative rounded-lg p-0.5 overflow-hidden bg-transparent shadow-sm hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                   <div className="relative z-10 flex items-center w-full h-full px-6 py-5 bg-black rounded-lg">
                     <div className="flex-shrink-0 mr-4">
                       <img className="w-16 h-16 rounded-full" src={Monk} alt=""/>
@@ -172,7 +172,7 @@ const S3Body = () => {
                     </div>
                   </div>
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-pink-500 via-purple-500 to-yellow-400" />
-                </div>
+                </a>
                 </Fade>
               </div>
               
