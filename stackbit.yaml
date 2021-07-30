@@ -218,7 +218,7 @@ models:
         type: string
         label: Featured Photo Subtitle Text
         default: just doin my spiritual thang
-      - name: ''
+      - name: gallery_pic
         type: image
   photos:
     type: data
