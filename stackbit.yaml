@@ -251,6 +251,8 @@ models:
       - name: apple_music_link
         type: string
         label: Apple Music
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
