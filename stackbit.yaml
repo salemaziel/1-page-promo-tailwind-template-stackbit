@@ -260,6 +260,8 @@ models:
       - name: tidal_link
         type: url
         label: Tidal
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
