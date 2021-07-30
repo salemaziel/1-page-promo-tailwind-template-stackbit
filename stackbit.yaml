@@ -240,7 +240,7 @@ models:
         type: string
         label: Spotify
       - name: instagram_link
-        type: string
+        type: url
         label: Instagram
       - name: youtube_link
         type: string
