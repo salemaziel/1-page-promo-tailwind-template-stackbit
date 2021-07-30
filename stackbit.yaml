@@ -223,6 +223,7 @@ models:
         label: Gallery Pic
       - name: gallery_url
         type: url
+        label: Photo URL
   photos:
     type: data
     label: Photos
