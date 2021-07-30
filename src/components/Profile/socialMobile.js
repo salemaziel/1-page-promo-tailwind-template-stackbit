@@ -19,7 +19,8 @@ const SocialMobile = ({data}) => (
                           <FaFacebook size="2rem" />
                         </a>
                       </span>
-                    </div>
+                    </div> : null }
+
                     <div className="p-3 mr-4 text-center">
                       <span className="block text-xl font-bold tracking-wide text-blue-700 uppercase">
                         <a
