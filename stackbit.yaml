@@ -221,7 +221,7 @@ models:
       - name: gallery_pic
         type: image
         label: Gallery Pic
-      - name: ''
+      - name: gallery_url
         type: string
   photos:
     type: data
