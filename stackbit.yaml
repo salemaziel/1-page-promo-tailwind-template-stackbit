@@ -224,6 +224,7 @@ models:
       - name: gallery_url
         type: url
         label: Photo URL
+        default: https://viadelweb.com
   photos:
     type: data
     label: Photos
