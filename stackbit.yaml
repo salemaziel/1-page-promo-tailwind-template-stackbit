@@ -129,59 +129,6 @@ models:
         models:
           - stackbit_page_meta
         label: Seo
-  social:
-    type: data
-    label: Social
-    file: social.yml
-    fields:
-      - type: url
-        name: facebook_link
-        label: Facebook
-        default: https://www.facebook.com/funkwithelmonk
-      - type: url
-        name: snapchat_link
-        label: Snapchat
-        default: https://snapchat.com
-      - type: url
-        name: twitter_link
-        label: Twitter
-        default: https://twitter.com/funkwithelmonk
-      - type: url
-        name: spotify_link
-        label: Spotify
-        default: https://spotify.com
-      - type: url
-        name: instagram_link
-        label: Instagram
-        default: https://www.instagram.com/funkwithelmonk/
-      - type: url
-        name: youtube_link
-        label: Youtube
-        default: https://youtube.com
-      - type: url
-        name: soundcloud_link
-        label: Soundcloud
-        default: https://soundcloud.com
-      - type: url
-        name: apple_music_link
-        label: Apple Music
-        default: https://applemusic.com
-      - type: url
-        name: youtube_music_link
-        label: Youtube Music
-        default: https://music.youtube.com
-      - type: url
-        name: tiktok_link
-        label: Tiktok
-        default: https://tiktok.com
-      - type: url
-        name: tidal_link
-        label: Tidal
-        default: https://tidal.com
-      - type: text
-        name: booking_email
-        label: Booking Contact Email
-        default: salem@viadelweb.com
   bio:
     type: data
     label: Bio
@@ -236,57 +183,43 @@ models:
       - name: twitter_link
         type: url
         label: Twitter
+        default: https://twitter.com/funkwithelmonk
       - name: spotify_link
         type: url
         label: Spotify
+        default: https://spotify.com
       - name: instagram_link
         type: url
+        default: https://www.instagram.com/funkwithelmonk/
         label: Instagram
       - name: youtube_link
         type: url
         label: Youtube
+        default: https://youtube.com
       - name: soundcloud_link
         type: url
         label: Soundcloud
+        default: https://soundcloud.com
       - name: apple_music_link
         type: url
         label: Apple Music
+        default: https://applemusic.com
       - name: youtube_music_link
         type: url
         label: Youtube Music
+        default: https://music.youtube.com
       - name: tiktok_link
         type: url
         label: Tiktok
+        default: https://tiktok.com
       - name: tidal_link
         type: url
         label: Tidal
+        default: https://tidal.com
       - name: booking_email
         type: string
         label: Booking Contact Email
-  photos:
-    type: data
-    label: Photos
-    file: photos.yml
-    fields:
-      - type: image
-        name: background_photo
-        label: Background Image
-      - type: image
-        name: caption_photo
-        label: Featured Photo
-      - type: string
-        name: caption_title
-        label: Caption Title Text
-      - type: string
-        name: caption_subtitle
-        label: Caption Subtitle Text
-      - type: image
-        name: gallery_pic
-        label: Gallery Pic
-      - type: url
-        name: gallery_url
-        label: Photo URL
-        default: https://viadelweb.com
+        default: salem@viadelweb.com
   advanced_page_fields:
     type: object
     label: Advanced page fields
