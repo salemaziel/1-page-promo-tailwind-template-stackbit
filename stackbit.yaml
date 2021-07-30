@@ -212,6 +212,7 @@ models:
         default: /assets/images/last-night-vibes.jpeg
       - name: caption_title
         type: string
+        label: Featured Photo Title Text
   photos:
     type: data
     label: Photos
