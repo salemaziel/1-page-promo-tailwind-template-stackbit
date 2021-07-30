@@ -260,7 +260,7 @@ models:
       - name: tidal_link
         type: url
         label: Tidal
-      - name: ''
+      - name: booking_email
         type: string
   photos:
     type: data
