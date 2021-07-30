@@ -206,7 +206,7 @@ models:
         type: image
         label: Background Photo
         default: /assets/images/wallhaven-45y613_m50.jpg
-      - name: ''
+      - name: caption_photo
         type: string
   photos:
     type: data
