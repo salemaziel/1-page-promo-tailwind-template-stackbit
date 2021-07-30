@@ -254,6 +254,8 @@ models:
       - name: youtube_music_link
         type: url
         label: Youtube Music
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
