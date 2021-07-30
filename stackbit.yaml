@@ -250,6 +250,7 @@ models:
         label: Soundcloud
       - name: apple_music_link
         type: string
+        label: Apple Music
   photos:
     type: data
     label: Photos
