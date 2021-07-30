@@ -209,6 +209,7 @@ models:
       - name: caption_photo
         type: string
         label: Featured Photo
+        default: /assets/images/last-night-vibes.jpeg
   photos:
     type: data
     label: Photos
