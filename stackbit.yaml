@@ -246,7 +246,7 @@ models:
         type: string
         label: Youtube
       - name: soundcloud_link
-        type: string
+        type: url
         label: Soundcloud
       - name: apple_music_link
         type: url
