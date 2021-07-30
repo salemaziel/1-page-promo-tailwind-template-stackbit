@@ -249,7 +249,7 @@ models:
         type: string
         label: Soundcloud
       - name: apple_music_link
-        type: string
+        type: url
         label: Apple Music
       - name: youtube_music_link
         type: url
