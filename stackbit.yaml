@@ -229,6 +229,8 @@ models:
         type: url
         label: Facebook
         default: https://facebook.com
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
