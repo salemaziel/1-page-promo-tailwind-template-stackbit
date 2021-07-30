@@ -228,6 +228,7 @@ models:
       - name: facebook_link
         type: url
         label: Facebook
+        default: https://facebook.com
   photos:
     type: data
     label: Photos
