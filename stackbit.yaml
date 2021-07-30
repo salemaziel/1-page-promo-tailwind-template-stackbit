@@ -248,6 +248,8 @@ models:
       - name: soundcloud_link
         type: string
         label: Soundcloud
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
