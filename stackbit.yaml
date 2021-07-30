@@ -257,7 +257,7 @@ models:
       - name: tiktok_link
         type: url
         label: Tiktok
-      - name: ''
+      - name: tidal_link
         type: string
   photos:
     type: data
