@@ -235,6 +235,9 @@ models:
         label: Snapchat
       - name: twitter_link
         type: string
+        label: Twitter
+      - name: ''
+        type: string
   photos:
     type: data
     label: Photos
