@@ -234,7 +234,7 @@ models:
         default: https://snapchat.com
         label: Snapchat
       - name: twitter_link
-        type: string
+        type: url
         label: Twitter
       - name: spotify_link
         type: url
