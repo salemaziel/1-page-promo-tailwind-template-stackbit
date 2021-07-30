@@ -239,7 +239,7 @@ models:
       - name: spotify_link
         type: string
         label: Spotify
-      - name: ''
+      - name: instagram_link
         type: string
   photos:
     type: data
