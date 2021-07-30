@@ -9,7 +9,7 @@ const SocialMobile = ({data}) => (
                   <div className="flex justify-center py-4">
                     <div className="p-3 mr-4 text-center">
                       <span className="block text-xl font-bold tracking-wide text-blue-700 uppercase">
-                      {i  <a
+                        <a
                           href={data.siteDataYaml.facebook_link}
                           title="El Monk on Facebook"
                           rel="noopener noreferrer"
