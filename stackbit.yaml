@@ -251,7 +251,7 @@ models:
       - name: apple_music_link
         type: string
         label: Apple Music
-      - name: ''
+      - name: youtube_music_link
         type: string
   photos:
     type: data
